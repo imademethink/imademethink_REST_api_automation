@@ -1,0 +1,239 @@
+{
+	"variables": [],
+	"info": {
+		"name": "account_basic_scenario_1",
+		"_postman_id": "286a3fe8-8879-efa0-7b79-f7b4e995926b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1_get_signup",
+			"request": {
+				"url": "http://localhost:8080/imademethink/restfulapi/account_basic/signup",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "signin_emailid",
+							"value": "hk44@hk.com",
+							"type": "text"
+						},
+						{
+							"key": "signin_password",
+							"value": "aaaaaaA0",
+							"type": "text"
+						},
+						{
+							"key": "signin_firstname",
+							"value": "ggg",
+							"type": "text"
+						},
+						{
+							"key": "signin_lastname",
+							"value": "ddd",
+							"type": "text"
+						},
+						{
+							"key": "signin_gender",
+							"value": "m",
+							"type": "text"
+						},
+						{
+							"key": "latest_session_key",
+							"value": "D7nQk9Je56rTWdFyf0xT1p9nGvY7Stry",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "2_signup_post",
+			"request": {
+				"url": "http://localhost:8080/imademethink/restfulapi/account_basic/signup",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "signup_emailid",
+							"value": "hk45@hk.com",
+							"type": "text"
+						},
+						{
+							"key": "signup_password",
+							"value": "aaaaaaA0",
+							"type": "text"
+						},
+						{
+							"key": "signup_firstname",
+							"value": "ggg",
+							"type": "text"
+						},
+						{
+							"key": "signup_lastname",
+							"value": "ddd",
+							"type": "text"
+						},
+						{
+							"key": "signup_gender",
+							"value": "m",
+							"type": "text"
+						},
+						{
+							"key": "signup_secret_question_1",
+							"value": "What is the brand of your toothpaste",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "signup_secret_question_1_answer",
+							"value": "aaaaa",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "signup_secret_question_2",
+							"value": "What is your favorite mobile app",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "signup_secret_question_2_answer",
+							"value": "bbbbb",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "3_get_activate",
+			"request": {
+				"url": "http://localhost:8080/imademethink/restfulapi/account_basic/activate?signup_emailid=hk45@hk.com&account_basic_activatation_key=",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "signin_emailid",
+							"value": "hk44@hk.com",
+							"type": "text"
+						},
+						{
+							"key": "signin_password",
+							"value": "aaaaaaA0",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "4_post_sign_in",
+			"request": {
+				"url": "http://localhost:8080/imademethink/restfulapi/account_basic/signin",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "signin_emailid",
+							"value": "hk45@hk.com",
+							"type": "text"
+						},
+						{
+							"key": "signin_password",
+							"value": "aaaaaaA0",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "5_delete_sign_out",
+			"request": {
+				"url": "http://localhost:8080/imademethink/restfulapi/account_basic/signout?signout_emailid=hk45@hk.com&session_id=",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
