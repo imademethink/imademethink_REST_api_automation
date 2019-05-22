@@ -373,7 +373,7 @@ public class Test_using_jayway {
         System.out.println("----------------------------------------------------------------------------");
         String url                 = objHashMapSignupPOSTTemp.get("str_signup_POST_url").toString();
 
-        Map<String,Object> params = new LinkedHashMap<>();
+        Map<String,Object> params = new LinkedHashMap<String,Object>();
         params.put(objHashMapBasicUserDetailsTemp.get("str_signup_POST_response_payload_key_emailid").toString(),
                    objHashMapBasicUserDetailsTemp.get("str_signup_POST_response_payload_value_emailid").toString());
         params.put(objHashMapBasicUserDetailsTemp.get("str_signup_POST_response_payload_key_firstname").toString(),
@@ -525,7 +525,7 @@ public class Test_using_jayway {
         System.out.println("----------------------------------------------------------------------------");
         String url                 = objHashMapSigninPOSTTemp.get("str_signin_POST_url").toString();
 
-        Map<String,Object> params = new LinkedHashMap<>();
+        Map<String,Object> params = new LinkedHashMap<String,Object>();
         params.put(objHashMapBasicUserDetailsTemp.get("str_signin_POST_response_payload_key_emailid").toString(),                      
                    objHashMapBasicUserDetailsTemp.get("str_signin_POST_response_payload_value_emailid").toString());
         params.put(objHashMapBasicUserDetailsTemp.get("str_signin_POST_response_payload_key_password").toString(),                      
@@ -912,7 +912,7 @@ public class Test_using_jayway {
         System.out.println("----------------------------------------------------------------------------");
         String url                 = objHashMapModifyAccountProfileDetailPUTTemp.get("str_modifyaccountprofiledetail_PUT_url").toString();
 
-        Map<String,Object> params = new LinkedHashMap<>();
+        Map<String,Object> params = new LinkedHashMap<String,Object>();
         params.put(objHashMapBasicUserDetailsTemp.get("str_modifyaccountprofiledetail_PUT_response_payload_key_emailid").toString(),
                    objHashMapBasicUserDetailsTemp.get("str_modifyaccountprofiledetail_PUT_response_payload_value_emailid").toString());
         params.put(objHashMapBasicUserDetailsTemp.get("str_modifyaccountprofiledetail_PUT_response_payload_key_firstname").toString(),
@@ -1060,7 +1060,7 @@ public class Test_using_jayway {
         System.out.println("----------------------------------------------------------------------------");
         String url                 = objHashMapResetPasswordPUTTemp.get("str_resetpassword_PUT_url").toString();
 
-        Map<String,Object> params = new LinkedHashMap<>();
+        Map<String,Object> params = new LinkedHashMap<String,Object>();
         params.put(objHashMapBasicUserDetailsTemp.get("str_resetpassword_PUT_response_payload_key_emailid").toString(),
                    objHashMapBasicUserDetailsTemp.get("str_resetpassword_PUT_response_payload_value_emailid").toString());
         params.put(objHashMapBasicUserDetailsTemp.get("str_forgetpassword_PUT_response_payload_key_secret_question_answer_1").toString(),
